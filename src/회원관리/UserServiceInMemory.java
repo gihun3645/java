@@ -39,10 +39,11 @@ public class UserServiceInMemory implements UserService{
         else
             return false;
     }
+
     private int findIndex(String email) {
         int findIndex = -1;
         for(int i=0; i < users.size(); i++) {
-            if(users.get(i).getName().equals(email)) {
+            if(users.get(i).getEmail().equals(email)) {
                 findIndex = i;
                 break;
             }
@@ -53,8 +54,7 @@ public class UserServiceInMemory implements UserService{
     @Override
     public boolean deleteUser(String email) {
         int findIndex = findIndex(email);
-        if(findIndex >= -1) {
-            users.remove(findIndex);
+        if(findIndex > -1) {
             return true;
         } else {
             return false;
