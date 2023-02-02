@@ -1,4 +1,4 @@
-package io;
+package 회원관리;
 
 import java.io.Serializable;
 

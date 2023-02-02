@@ -1,5 +1,7 @@
 package io;
 
+import 회원관리.User;
+
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 

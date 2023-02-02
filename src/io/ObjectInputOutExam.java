@@ -1,5 +1,7 @@
 package io;
 
+import 회원관리.User;
+
 import java.io.*;
 import java.util.ArrayList;
 

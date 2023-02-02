@@ -1,5 +1,7 @@
 package io;
 
+import 회원관리.User;
+
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
