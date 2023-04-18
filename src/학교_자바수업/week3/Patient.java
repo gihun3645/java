@@ -1,4 +1,4 @@
-package 학교_자바수업.week4;
+package 학교_자바수업.week3;
 
 public class Patient {
     public double getBMI;
