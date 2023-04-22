@@ -7,24 +7,33 @@ import java.awt.*;
 public class LoginButton extends JFrame {
     public LoginButton() {
         setTitle("로그인");
-        setSize(400, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        Container cPane = getContentPane();
 
-        JPanel panel1 = new JPanel();
-        JPanel panel2 = new JPanel();
-        JPanel panel3 = new JPanel();
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(0,2,10,3));
 
-        panel1.add(new JLabel("아이디"));
-        panel1.add(new JTextField(10));
-        panel2.add(new JLabel("비밀번호"));
-        panel2.add(new JTextField(10));
-        panel3.add(new JButton("로그인"));
-        panel3.add(new Checkbox("ID저장"));
+        JLabel labelId = new JLabel("아이디", JLabel.RIGHT);
+        JLabel labelPw = new JLabel("비밀번호", JLabel.RIGHT);
+        JTextField inputId = new JTextField(8);
+        JTextField inputPw = new JTextField(8);
+        JCheckBox storeId = new JCheckBox("아이디 저장", true);
+        JButton idBtn = new JButton("로그인");
+        JButton cancelBtn = new JButton("취소");
 
-        cPane.add(panel1, BorderLayout.NORTH);
-        cPane.add(panel2, BorderLayout.CENTER);
-        cPane.add(panel3, BorderLayout.SOUTH);
+
+        // 패널에 추가
+        panel.add(labelId);
+        panel.add(inputId);
+        panel.add(labelPw);
+        panel.add(inputPw);
+        panel.add(new JLabel());
+        panel.add(storeId);
+        panel.add(idBtn);
+        panel.add(cancelBtn);
+        add(panel);
+
+        //  JFrame의 크기를 자식 컴포넌트의 크기에 맞게 자동으로 조절해주는 메소드입니다.
+        pack();
     }
 
     public static void main(String[] args) {
