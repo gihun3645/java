@@ -5,11 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Homework11 extends JFrame {
+public class Homework10 extends JFrame {
     private JButton[] buttons; // Declare the array of buttons
 
-    public Homework11() {
-        setTitle("Homework11");
+    public Homework10() {
+        setTitle("Homework10");
         setSize(300, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -19,11 +19,11 @@ public class Homework11 extends JFrame {
 
         buttons = new JButton[16]; // 16개 버튼 만듬
         for (int i = 0; i < 16; i++) {
-            buttons[i] = new JButton(String.valueOf(i+1)); // Initialize each button
+            buttons[i] = new JButton(String.valueOf(i+1));
             buttons[i].setOpaque(true);
             buttons[i].setBorder(BorderFactory.createLineBorder(Color.BLACK));
             buttons[i].setBackground(Color.WHITE);
-            buttons[i].addActionListener(new ButtonClickListener()); // Add a custom action listener to each button
+            buttons[i].addActionListener(new ButtonClickListener());
             panel.add(buttons[i]);
         }
 
@@ -44,6 +44,6 @@ public class Homework11 extends JFrame {
     }
 
     public static void main(String[] args) {
-        (new Homework11()).setVisible(true);
+        (new Homework10()).setVisible(true);
     }
 }
