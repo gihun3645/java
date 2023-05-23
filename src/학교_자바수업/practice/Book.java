@@ -36,9 +36,9 @@ public class Book {
 
     public static void main(String[] args) {
         Book b1 = new Book("벌레 이야기", "이청준");
-        System.out.println("b1 = " + b1.toString());
+        System.out.println("b1 = " + b1);
         Book b2 = new Book("벌레 이야기", "이청준");
-        System.out.println("b2 = " + b2.toString());
+        System.out.println("b2 = " + b2);
         System.out.println("b1.eqauls(b2) : " + b1.equals(b2)); // 문자열이 같아서 true를 반환
     }
 }
