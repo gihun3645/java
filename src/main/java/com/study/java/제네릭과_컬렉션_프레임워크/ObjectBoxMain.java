@@ -1,0 +1,14 @@
+package com.study.java.제네릭과_컬렉션_프레임워크;
+
+public class ObjectBoxMain {
+    public static void main(String[] args) {
+        ObjectBox box = new ObjectBox();
+        box.set("kim");
+        String str = (String)box.get();
+        System.out.println(str.toUpperCase());
+
+        box.set(new Integer(5));
+        Integer i = (Integer)box.get();
+        System.out.println(i.intValue());
+    }
+}
